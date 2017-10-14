@@ -1,0 +1,23 @@
+Creating and Destroying the Process Hierarcy Tree H level deep with each process node having C childs.
+
+Overview:
+
+Program accept two command-line arguments H and C that describe the structure of the process tree. The argument H is the height of the tree and C is the number of child processes belonging to each internal node of the process tree.
+Upon starting up, your program should first print the following information: (pid): Process starting (pid): Parent's id = (ppid) (pid): Height in the tree = (value_of_H_from_command_line_argument) (pid): Creating (value_of_C_from_command_line) children at height (H-1)
+When the height H is greater than 1, your program should create C child processes using fork(), and wait for all of the children to complete using the wait() system call.
+Once all the child processes (if any) terminates, program terminates by printing -- (pid): Terminating at height (H).
+Conditions enforced:
+
+Parent can not quit before ALL child processes terminate.
+
+Use make to compile the program. Then use the following format to
+execute the program:
+
+    ./hw1 H C
+
+For example, to create process tree with 2 layers with 2 children
+for each internal process node,
+
+    ./hw1 2 2
+
+
