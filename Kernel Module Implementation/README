@@ -1,0 +1,9 @@
+a) list.c is the Kernel Module code.
+b) test.c is the user level code.
+
+These two files along with the Makefile should be in same folder.
+
+To run the program, type the following in terminal :
+1) make
+2) sudo insmod list.ko
+3) sudo ./test
