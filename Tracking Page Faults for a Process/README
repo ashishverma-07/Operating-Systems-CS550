@@ -1,0 +1,9 @@
+1) At first in folder just run make
+2) Afer that you have to load a kernel module:
+insmod ./jprobe.ko process_id=id
+id - pid for you testing (by default pid = 1)
+for unload kernel module you have to run
+rmmod ./jprobe.ko
+3) For testing kernel module just compile user program
+gcc -Wall user.c -o user
+4) and run ./user 
